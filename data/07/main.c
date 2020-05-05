@@ -6,7 +6,7 @@ int main(int agrc, char *argv[])
   int age = 20;
 
   int majeur = 0;
-	majeur = age >= 18;
+	majeur = age <= 10;
 	{
 	printf("Majeur vaut : %d\n", majeur);
 }
