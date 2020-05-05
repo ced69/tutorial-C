@@ -7,7 +7,7 @@ int main(int agrc, char *argv[])
 
 	if (age >= 18)
 	{
-		printf("Vous etes majeur !\n");
+		printf("Vous etes majeur !\t");
 	}
 
 	return 0;
