@@ -3,6 +3,21 @@
 #include<time.h>
 #include<stdbool.h>
 
+//Declaration d'une fonction
+int generateMystereNumber()
+{
+	const int MAX = 100, MIN = 1;
+	int back = 0;
+
+	// Génération du nombre aléqtoire
+
+	srand(time(NULL));
+	back = (rand() % (MAX - MIN + 1)) + MIN;
+	return back;
+}
+
+
+
 int main( int argc, char *argv[])
 {
 	bool found = false;
@@ -10,14 +25,10 @@ int main( int argc, char *argv[])
 	int nombreEntre = 0;
 	const int MAX = 100, MIN = 1;
 	int compteur = 0;
+	int restart = 1;
 
-	// Génération du nombre aléqtoire
-
-	srand(time(NULL));
-	nombreMystere = (rand() % (MAX - MIN + 1)) + MIN;
-
-	// On demande un nombre
-
+	nombreMystere = generateMystereNumber();
+	printf("Le nombre a trouver est: %d\n", nombreMystere);
 
 	while (found == false)
 	{	
@@ -38,10 +49,23 @@ int main( int argc, char *argv[])
 		{
 			found = true;
 			printf("Bravo vous avez trouve le nombre Mystere en %d coups !!!\n\n", compteur);
-				
+			printf(" Voulez-vous refaire une partie ?\n");
+			printf("1 : oui, 2 : non\n\nVotre choix : ");
+			scanf("%d", &restart);				
+		       	if (restart == 1)
+			{
+				found = false;
+				compteur = 0;
+				nombreMystere = generateMystereNumber();
+				printf("Le nombre a trouver est: %d\n", nombreMystere);
+   		
+			}
 		}
-	}
+
+
+	 } 
 
 	return 0;
 
 }
+
