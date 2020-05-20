@@ -23,7 +23,6 @@ int main( int argc, char *argv[])
 	bool found = false;
 	int nombreMystere = 0;
 	int nombreEntre = 0;
-	const int MAX = 100, MIN = 1;
 	int compteur = 0;
 	int restart = 1;
 
