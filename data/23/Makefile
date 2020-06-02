@@ -6,9 +6,8 @@ CC=gcc
 CFLAGS=-W -Wall -ansi -pedantic
 LDFLAGS=
 NAME=menu
-SRC=main.c 
-    
-	
+SRC=src/main.c \
+    	
 OBJ=$(SRC:.c=.o)
 
 all: $(NAME)
