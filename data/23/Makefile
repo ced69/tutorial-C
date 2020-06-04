@@ -7,6 +7,7 @@ CFLAGS=-W -Wall -ansi -pedantic
 LDFLAGS=
 NAME=menu
 SRC=src/main.c \
+    src/menu.c
     	
 OBJ=$(SRC:.c=.o)
 
